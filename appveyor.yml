@@ -13,5 +13,13 @@ build:
   project: OpenHardwareMonitor.sln
   verbosity: minimal
 
-artifacts:
-  - path: 'Bin\Release\'
+deploy:
+  provider: GitHub
+  auth_token:
+    secure: CFX0npfCcVQxG4zzXNhUkB8mfhfyFDNiBp7m66sPRq4fIXdZeSM08pTVFjVw9LcH
+  artifact: /.*\.zip/
+  on:
+    branch: master
+  
+# artifacts:
+  # - path: 'Bin\Release\'
